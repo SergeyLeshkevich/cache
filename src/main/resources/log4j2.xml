@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <Appenders>
+
+        <File name="File" fileName="src/main/resources/application.log">
+            <PatternLayout pattern="%d %p [%c] - %m%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+
+</Configuration>
