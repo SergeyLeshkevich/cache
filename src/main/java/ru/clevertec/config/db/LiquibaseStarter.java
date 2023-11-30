@@ -8,6 +8,8 @@ import liquibase.database.DatabaseFactory;
 import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.LiquibaseException;
 import liquibase.resource.ClassLoaderResourceAccessor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.clevertec.util.YmlManager;
 
 import java.io.FileNotFoundException;
@@ -18,6 +20,7 @@ import java.util.Map;
 
 public class LiquibaseStarter {
 
+    private static final Logger logger = LogManager.getLogger(LiquibaseStarter.class);
     private static final String FILENAME = "src/main/resources/application.yaml";
     private static final String USERNAME_KEY = "username";
     private static final String URL_KEY = "url";
@@ -38,11 +41,11 @@ public class LiquibaseStarter {
                 LabelExpression labelExpression = new LabelExpression();
                 liquibase.update(contexts, labelExpression);
             } catch (LiquibaseException e) {
-                throw new RuntimeException(e);
+                logger.error(e);
             }
 
         } catch (FileNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
+            logger.error(e);
         }
     }
 }

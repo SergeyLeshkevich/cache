@@ -123,3 +123,35 @@
 2023-11-19 23:14:41,907 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=5cdd6de2-3dd1-4203-9089-7823b33d87fe, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в кеш
 2023-11-19 23:14:41,922 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 удаление из БД
 2023-11-19 23:14:41,928 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 удаление из кеша
+2023-11-29 11:35:47,806 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:37:41,576 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:42:15,255 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:45:07,594 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:53:20,245 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:56:03,027 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:56:48,440 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:57:25,488 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:58:09,995 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:58:28,788 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:58:52,354 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 11:59:14,835 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:00:50,991 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:02:17,022 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:08:35,696 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:08:56,056 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:13:21,435 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:20:30,339 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 12:22:59,348 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 15:16:53,926 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 15:20:57,200 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
+2023-11-29 15:35:40,517 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:36:34,456 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:36:46,967 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:36:47,207 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:36:53,204 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:36:53,438 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:37:05,960 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:37:06,169 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:37:54,324 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:37:58,868 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-11-29 15:37:59,106 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)

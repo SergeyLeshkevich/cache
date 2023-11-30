@@ -7,10 +7,10 @@ import java.lang.reflect.Field;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidationCar {
+public class Validation {
 
-    public static <T> void validate(T car) {
-        Field[] fields = car.getClass().getDeclaredFields();
+    public static <T> void validate(T validateObject) {
+        Field[] fields = validateObject.getClass().getDeclaredFields();
         for (Field field : fields) {
             if (field.isAnnotationPresent(Valid.class)) {
                 field.setAccessible(true);
@@ -19,7 +19,7 @@ public class ValidationCar {
                 Pattern pattern = Pattern.compile(regex);
                 Object valueField = null;
                 try {
-                    valueField = field.get(car);
+                    valueField = field.get(validateObject);
                     Matcher matcher = pattern.matcher(valueField.toString());
                     if (!matcher.find()) {
                         throw new ValidationException("Invalid field " + field.getName());

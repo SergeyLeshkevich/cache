@@ -1,6 +1,5 @@
 package ru.clevertec.cache.impl;
 
-
 import lombok.ToString;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

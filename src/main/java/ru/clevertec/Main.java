@@ -20,7 +20,8 @@ import ru.clevertec.enums.Fuel;
 import ru.clevertec.service.CarService;
 import ru.clevertec.service.impl.CarServiceImpl;
 import ru.clevertec.service.proxy.ProxyCarDAOImpl;
-import ru.clevertec.util.validation.ValidationCar;
+import ru.clevertec.util.FileHandler;
+import ru.clevertec.util.validation.Validation;
 
 import javax.sql.DataSource;
 import java.util.UUID;
@@ -30,6 +31,9 @@ import java.util.UUID;
 public class Main {
 
     private static final Logger logger = LogManager.getLogger(Main.class);
+    public static final String TABLE_NAME = "Table CarDTO from data base";
+    public static final String PATH_FILE = "src/main/resources/list_cars";
+    public static final String PDF = ".pdf";
 
     public static void main(String[] args) {
 
@@ -71,9 +75,13 @@ public class Main {
 
         CarDTO carNoValid = new CarDTO("BMW123", "730", BodyType.SEDAN, 3.0, Fuel.PETROL);
         try {
-            ValidationCar.validate(carNoValid);
+            Validation.validate(carNoValid);
         } catch (ValidationException e) {
             logger.info(e.getMessage());
         }
+
+        new FileHandler().writeTableToFilePDF(PATH_FILE + UUID.randomUUID() + PDF,
+                service.getAll(),
+                TABLE_NAME);
     }
 }

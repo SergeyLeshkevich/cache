@@ -1,6 +1,8 @@
 package ru.clevertec.config.db;
 
 import org.apache.commons.dbcp.BasicDataSource;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.clevertec.util.YmlManager;
 
 import java.io.FileNotFoundException;
@@ -8,6 +10,7 @@ import java.util.Map;
 
 public class DatabaseConfig {
 
+    private static final Logger logger = LogManager.getLogger(DatabaseConfig.class);
     private static final String FILENAME = "src/main/resources/application.yaml";
     private static final String USERNAME_KEY = "username";
     private static final String DRIVER_KEY = "driver";
@@ -24,7 +27,7 @@ public class DatabaseConfig {
             dataSource.setUsername((String) configValueMap.get(USERNAME_KEY));
             dataSource.setPassword((String) configValueMap.get(PASSWORD_KEY));
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            logger.error(e);
         }
 
         return dataSource;

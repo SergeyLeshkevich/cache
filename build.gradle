@@ -15,6 +15,11 @@ ext {
 }
 
 dependencies {
+    implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.3'
+    implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '3.0.0'
+    implementation 'com.itextpdf:itext-core:8.0.2'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.15.0'
+
     implementation 'org.liquibase:liquibase-core:4.8.0'
     implementation group: 'org.liquibase', name: 'liquibase-groovy-dsl', version: '3.0.3'
 
