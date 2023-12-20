@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="insert-into-car1" author="S.Leshkevich">
+        <insert tableName="cars">
+            <column name="brand" value="Toyota"/>
+            <column name="model" value="Hilux"/>
+            <column name="body_type" value="PICKUP"/>
+            <column name="engine_capacity" value="2.5"/>
+            <column name="fuel_type" value="DIESEL"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-car2" author="S.Leshkevich">
+        <insert tableName="cars">
+            <column name="id" value="1be4206e-787f-4708-924f-1adf9dd9a5da"/>
+            <column name="brand" value="BMW"/>
+            <column name="model" value="5 G30"/>
+            <column name="body_type" value="SEDAN"/>
+            <column name="engine_capacity" value="3.0"/>
+            <column name="fuel_type" value="DIESEL"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-car3" author="S.Leshkevich">
+        <insert tableName="cars">
+            <column name="id" value="5e77ceb8-2102-43e6-b57c-436026d9fc86"/>
+            <column name="brand" value="Volkswagen"/>
+            <column name="model" value="Passat B8"/>
+            <column name="body_type" value="STATION_WAGON"/>
+            <column name="engine_capacity" value="2.0"/>
+            <column name="fuel_type" value="PETROL"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-car4" author="S.Leshkevich">
+        <insert tableName="cars">
+            <column name="id" value="ad3e4e25-5c0b-4a75-b0f8-ec772db3f065"/>
+            <column name="brand" value="Volkswagen"/>
+            <column name="model" value="Passat B8"/>
+            <column name="body_type" value="SEDAN"/>
+            <column name="engine_capacity" value="2.0"/>
+            <column name="fuel_type" value="DIESEL"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-into-car5" author="S.Leshkevich">
+        <insert tableName="cars">
+            <column name="id" value="a87b358c-2740-4a72-a3b5-f408017e4bbe"/>
+            <column name="brand" value="Mercedes"/>
+            <column name="model" value="C W205"/>
+            <column name="body_type" value="SEDAN"/>
+            <column name="engine_capacity" value="1.6"/>
+            <column name="fuel_type" value="DIESEL"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "8.4"
+    id "org.liquibase.gradle" version "2.2.0"
+}
+
+group = 'ru.clevertec'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+ext {
+    mockitoVersion = '5.6.0'
+}
+
+dependencies {
+    implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.3'
+    implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '3.0.0'
+    implementation 'com.itextpdf:itext-core:8.0.2'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.15.0'
+
+    implementation 'org.liquibase:liquibase-core:4.8.0'
+    implementation group: 'org.liquibase', name: 'liquibase-groovy-dsl', version: '3.0.3'
+
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+    annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '6.0.11'
+    implementation group: 'org.springframework', name: 'spring-core', version: '6.0.11'
+    implementation group: 'commons-dbcp', name: 'commons-dbcp', version: '1.2.2'
+
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '2.2'
+    implementation 'org.projectlombok:lombok:1.18.26'
+
+    testImplementation 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation 'org.postgresql:postgresql:42.2.27'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.6.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.20.0'
+    implementation group: 'com.lmax', name: 'disruptor', version: '3.3.4'
+
+    testImplementation group: 'com.h2database', name: 'h2', version: '2.2.224'
+    testImplementation "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+apply plugin: 'org.liquibase.gradle'
+
+test {
+    useJUnitPlatform()
+}
