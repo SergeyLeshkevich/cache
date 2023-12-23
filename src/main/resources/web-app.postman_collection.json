@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "98a90c9f-2275-4ca7-8129-04eca2ad646a",
+		"name": "web-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28834266"
+	},
+	"item": [
+		{
+			"name": "print_car_to_pdf_file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_car",
+							"value": "940c4c49-da78-49ed-b7bb-620bb1988ca8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}/web_app/cars/file?uuid=1be4206e-787f-4708-924f-1adf9dd9a5da",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"web_app",
+						"cars",
+						"file"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "1be4206e-787f-4708-924f-1adf9dd9a5da"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_list_cars_by_number_page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/web_app/cars/page?numberPage=3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"web_app",
+						"cars",
+						"page"
+					],
+					"query": [
+						{
+							"key": "numberPage",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/web_app/cars?brand=Peugeot&model=500800&b_type=minivan&en_capacity=1.6&fuel_type=diesel",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"web_app",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "Peugeot"
+						},
+						{
+							"key": "model",
+							"value": "500800"
+						},
+						{
+							"key": "b_type",
+							"value": "minivan"
+						},
+						{
+							"key": "en_capacity",
+							"value": "1.6"
+						},
+						{
+							"key": "fuel_type",
+							"value": "diesel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/web_app/cars?uuid=e4866644-fd55-4cfc-8e56-baff0fef3295",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"web_app",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "e4866644-fd55-4cfc-8e56-baff0fef3295"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/web_app/cars?uuid=1be4206e-787f-4708-924f-1adf9dd9a5da&brand=Peugeot&model=5008&b_type=minivan&en_capacity=1.5&fuel_type=diesel",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"web_app",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "1be4206e-787f-4708-924f-1adf9dd9a5da"
+						},
+						{
+							"key": "brand",
+							"value": "Peugeot"
+						},
+						{
+							"key": "model",
+							"value": "5008"
+						},
+						{
+							"key": "b_type",
+							"value": "minivan"
+						},
+						{
+							"key": "en_capacity",
+							"value": "1.5"
+						},
+						{
+							"key": "fuel_type",
+							"value": "diesel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/web_app/car?uuid=1be4206e-787f-4708-924f-1adf9dd9a5da",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"web_app",
+						"car"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "1be4206e-787f-4708-924f-1adf9dd9a5da"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

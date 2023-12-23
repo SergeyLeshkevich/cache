@@ -1,6 +1,7 @@
 package ru.clevertec;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mapstruct.factory.Mappers;
@@ -12,11 +13,11 @@ import ru.clevertec.config.db.LiquibaseStarter;
 import ru.clevertec.dao.impl.InPostgresCarDAO;
 import ru.clevertec.entity.Car;
 import ru.clevertec.entity.data.CarDTO;
+import ru.clevertec.enums.BodyType;
+import ru.clevertec.enums.Fuel;
 import ru.clevertec.exception.CarNotFoundException;
 import ru.clevertec.exception.ValidationException;
 import ru.clevertec.mapper.CarMapper;
-import ru.clevertec.enums.BodyType;
-import ru.clevertec.enums.Fuel;
 import ru.clevertec.service.CarService;
 import ru.clevertec.service.impl.CarServiceImpl;
 import ru.clevertec.service.proxy.ProxyCarDAOImpl;
@@ -28,9 +29,9 @@ import java.util.UUID;
 
 
 @RequiredArgsConstructor
+@Slf4j
 public class Main {
 
-    private static final Logger logger = LogManager.getLogger(Main.class);
     public static final String TABLE_NAME = "Table CarDTO from data base";
     public static final String PATH_FILE = "src/main/resources/list_cars";
     public static final String PDF = ".pdf";
@@ -41,7 +42,7 @@ public class Main {
         NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(dataSource);
         CacheFactory<UUID, Car> cacheFactory = new CacheFactoryImpl<>();
 
-        LiquibaseStarter.creatDbForStartProject();
+        new LiquibaseStarter().createDbForStartProject();
         ProxyCarDAOImpl carDAO = new ProxyCarDAOImpl(new InPostgresCarDAO(template), cacheFactory.createCache());
         CarMapper carMapper = Mappers.getMapper(CarMapper.class);
         CarService service = new CarServiceImpl(carDAO, carMapper);
@@ -62,13 +63,13 @@ public class Main {
         try {
             service.get(UUID.fromString("26635638-2f30-4891-81a0-bcac1f97b0d4"));
         } catch (CarNotFoundException e) {
-            logger.info(e.getMessage());
+            log.error(e.getMessage());
         }
 
         try {
             System.out.println(service.get(UUID.fromString("1be4206e-787f-4708-924f-1adf9dd9a5da")));
         } catch (CarNotFoundException e) {
-            logger.info(e.getMessage());
+            log.error(e.getMessage());
         }
 
         System.out.println(service.update(UUID.fromString("1be4206e-787f-4708-924f-1adf9dd9a5da"), car4));
@@ -77,7 +78,7 @@ public class Main {
         try {
             Validation.validate(carNoValid);
         } catch (ValidationException e) {
-            logger.info(e.getMessage());
+            log.error(e.getMessage());
         }
 
         new FileHandler().writeTableToFilePDF(PATH_FILE + UUID.randomUUID() + PDF,

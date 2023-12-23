@@ -4,3 +4,7 @@ url: jdbc:postgresql://localhost:5432/cash_db
 username: postgres
 password: admin
 driver: org.postgresql.Driver
+cachePrepStmts: true
+prepStmtCacheSize: 250
+prepStmtCacheSqlLimit: 2048
+limit_car: 3

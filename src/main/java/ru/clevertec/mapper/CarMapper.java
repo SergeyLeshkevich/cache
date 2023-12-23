@@ -2,8 +2,8 @@ package ru.clevertec.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.entity.Car;
+import ru.clevertec.entity.data.CarDTO;
 
 import java.util.List;
 

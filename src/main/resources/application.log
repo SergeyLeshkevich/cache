@@ -1,157 +1,69 @@
-2023-11-19 22:12:17,891 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=fba2f1bf-40f3-4032-b9fb-16cf6ab49ea8, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в БД
-2023-11-19 22:12:18,209 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=fba2f1bf-40f3-4032-b9fb-16cf6ab49ea8, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,209 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id fba2f1bf-40f3-4032-b9fb-16cf6ab49ea8: null
-2023-11-19 22:12:18,209 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=fba2f1bf-40f3-4032-b9fb-16cf6ab49ea8, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 22:12:18,209 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id fba2f1bf-40f3-4032-b9fb-16cf6ab49ea8: Car(id=fba2f1bf-40f3-4032-b9fb-16cf6ab49ea8, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 22:12:18,209 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=f680ed45-7752-4984-a031-8c70cf31bd48, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в БД
-2023-11-19 22:12:18,211 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=f680ed45-7752-4984-a031-8c70cf31bd48, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,211 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id f680ed45-7752-4984-a031-8c70cf31bd48: null
-2023-11-19 22:12:18,211 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=f680ed45-7752-4984-a031-8c70cf31bd48, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,211 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id f680ed45-7752-4984-a031-8c70cf31bd48: Car(id=f680ed45-7752-4984-a031-8c70cf31bd48, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,212 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=0d8dc318-843d-48aa-826a-933795372043, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL) сохраненение/обновление в БД
-2023-11-19 22:12:18,213 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=0d8dc318-843d-48aa-826a-933795372043, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,213 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 0d8dc318-843d-48aa-826a-933795372043: null
-2023-11-19 22:12:18,213 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=0d8dc318-843d-48aa-826a-933795372043, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL)
-2023-11-19 22:12:18,213 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 0d8dc318-843d-48aa-826a-933795372043: Car(id=0d8dc318-843d-48aa-826a-933795372043, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL)
-2023-11-19 22:12:18,214 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=dd6c9e92-a75c-4056-96fc-adc36149e839, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в БД
-2023-11-19 22:12:18,215 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=dd6c9e92-a75c-4056-96fc-adc36149e839, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,215 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id dd6c9e92-a75c-4056-96fc-adc36149e839: null
-2023-11-19 22:12:18,216 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=dd6c9e92-a75c-4056-96fc-adc36149e839, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 22:12:18,216 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id dd6c9e92-a75c-4056-96fc-adc36149e839: Car(id=dd6c9e92-a75c-4056-96fc-adc36149e839, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 22:12:18,216 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=de8fd3d8-5119-42eb-a787-d66c02dfe79f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в БД
-2023-11-19 22:12:18,217 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=de8fd3d8-5119-42eb-a787-d66c02dfe79f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,217 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id de8fd3d8-5119-42eb-a787-d66c02dfe79f: null
-2023-11-19 22:12:18,218 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
-2023-11-19 22:12:18,219 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=de8fd3d8-5119-42eb-a787-d66c02dfe79f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,219 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id de8fd3d8-5119-42eb-a787-d66c02dfe79f: Car(id=de8fd3d8-5119-42eb-a787-d66c02dfe79f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,219 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=cbc5a10a-f146-4643-a55f-33c5a79ea09e, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в БД
-2023-11-19 22:12:18,220 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=cbc5a10a-f146-4643-a55f-33c5a79ea09e, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,221 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id cbc5a10a-f146-4643-a55f-33c5a79ea09e: null
-2023-11-19 22:12:18,221 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
-2023-11-19 22:12:18,221 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=cbc5a10a-f146-4643-a55f-33c5a79ea09e, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,221 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id cbc5a10a-f146-4643-a55f-33c5a79ea09e: Car(id=cbc5a10a-f146-4643-a55f-33c5a79ea09e, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,221 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=064cf274-7a02-48f2-86c6-5492177ba698, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в БД
-2023-11-19 22:12:18,222 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=064cf274-7a02-48f2-86c6-5492177ba698, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,222 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 064cf274-7a02-48f2-86c6-5492177ba698: null
-2023-11-19 22:12:18,222 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
-2023-11-19 22:12:18,223 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=064cf274-7a02-48f2-86c6-5492177ba698, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
-2023-11-19 22:12:18,223 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 064cf274-7a02-48f2-86c6-5492177ba698: Car(id=064cf274-7a02-48f2-86c6-5492177ba698, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
-2023-11-19 22:12:18,223 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 удаление из БД
-2023-11-19 22:12:18,224 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 удаление из кеша
-2023-11-19 22:12:18,224 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Удаление объект из кеша с id 26635638-2f30-4891-81a0-bcac1f97b0d4: null
-2023-11-19 22:12:18,224 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 из кеша
-2023-11-19 22:12:18,225 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 26635638-2f30-4891-81a0-bcac1f97b0d4: null
-2023-11-19 22:12:18,225 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Объект Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 из кеша равен null
-2023-11-19 22:12:18,225 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 из БД
-2023-11-19 22:12:18,226 INFO [ru.clevertec.Main] - Car with uuid: 26635638-2f30-4891-81a0-bcac1f97b0d4 not found
-2023-11-19 22:12:18,226 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из кеша
-2023-11-19 22:12:18,226 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 1be4206e-787f-4708-924f-1adf9dd9a5da: null
-2023-11-19 22:12:18,226 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Объект Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из кеша равен null
-2023-11-19 22:12:18,226 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из БД
-2023-11-19 22:12:18,227 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Обновление объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da в кеше
-2023-11-19 22:12:18,227 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: null
-2023-11-19 22:12:18,227 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
-2023-11-19 22:12:18,227 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,227 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,241 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в БД
-2023-11-19 22:12:18,243 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в кеш
-2023-11-19 22:12:18,244 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
-2023-11-19 22:12:18,244 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
-2023-11-19 22:12:18,249 INFO [ru.clevertec.Main] - Invalid field brand
-2023-11-19 23:14:07,729 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607: null
-2023-11-19 23:14:07,820 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 44762276-3651-43ce-a4b3-e7587acbc607: null
-2023-11-19 23:14:07,839 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:07,839 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 44762276-3651-43ce-a4b3-e7587acbc607: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:07,840 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:07,843 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1: null
-2023-11-19 23:14:07,843 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: a
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1: a
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 2: null
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: b
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 2: b
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 3: null
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: c
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 3: c
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: a
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1: a
-2023-11-19 23:14:07,844 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: b
-2023-11-19 23:14:07,845 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 2: b
-2023-11-19 23:14:07,845 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: b
-2023-11-19 23:14:07,845 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 2: b
-2023-11-19 23:14:07,845 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 4: null
-2023-11-19 23:14:07,846 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: e
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 4: e
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: e
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 4: e
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 3: null
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: c
-2023-11-19 23:14:07,847 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 3: c
-2023-11-19 23:14:07,860 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 44762276-3651-43ce-a4b3-e7587acbc607: null
-2023-11-19 23:14:07,860 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:07,860 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 44762276-3651-43ce-a4b3-e7587acbc607: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:07,861 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Удаление объект из кеша с id 44762276-3651-43ce-a4b3-e7587acbc607: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:18,769 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607: null
-2023-11-19 23:14:18,860 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607: null
-2023-11-19 23:14:18,860 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607 добавлен в кеш
-2023-11-19 23:14:18,872 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607: Car(id=44762276-3651-43ce-a4b3-e7587acbc607, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
-2023-11-19 23:14:18,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 1: null
-2023-11-19 23:14:18,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 1 добавлен в кеш
-2023-11-19 23:14:18,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 2: null
-2023-11-19 23:14:18,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 2 добавлен в кеш
-2023-11-19 23:14:18,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 3: null
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 3 добавлен в кеш
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 1 обнавлен в кеше
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 2 обнавлен в кеше
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 2 обнавлен в кеше
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 4: null
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 4 добавлен в кеш
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 4 обнавлен в кеше
-2023-11-19 23:14:18,875 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 3 обнавлен в кеше
-2023-11-19 23:14:18,891 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607: null
-2023-11-19 23:14:18,891 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607 добавлен в кеш
-2023-11-19 23:14:18,891 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LRUCache.Объект с id 44762276-3651-43ce-a4b3-e7587acbc607 удален из кеша
-2023-11-19 23:14:41,708 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-19 23:14:41,853 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 из кеша
-2023-11-19 23:14:41,855 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Объект Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 из кеша равен null
-2023-11-19 23:14:41,855 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 из БД
-2023-11-19 23:14:41,856 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Обновление объекта Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 в кеше
-2023-11-19 23:14:41,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 из кеша
-2023-11-19 23:14:41,874 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Обновление объекта Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 в кеше
-2023-11-19 23:14:41,907 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=5cdd6de2-3dd1-4203-9089-7823b33d87fe, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в БД
-2023-11-19 23:14:41,907 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=5cdd6de2-3dd1-4203-9089-7823b33d87fe, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в кеш
-2023-11-19 23:14:41,922 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 удаление из БД
-2023-11-19 23:14:41,928 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 44762276-3651-43ce-a4b3-e7587acbc607 удаление из кеша
-2023-11-29 11:35:47,806 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:37:41,576 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:42:15,255 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:45:07,594 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:53:20,245 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:56:03,027 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:56:48,440 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:57:25,488 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:58:09,995 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:58:28,788 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:58:52,354 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 11:59:14,835 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:00:50,991 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:02:17,022 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:08:35,696 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:08:56,056 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:13:21,435 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:20:30,339 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 12:22:59,348 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 15:16:53,926 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 15:20:57,200 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД
-2023-11-29 15:35:40,517 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:36:34,456 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:36:46,967 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:36:47,207 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:36:53,204 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:36:53,438 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:37:05,960 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:37:06,169 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:37:54,324 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:37:58,868 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2023-11-29 15:37:59,106 INFO [ru.clevertec.util.FileHandler] - src\test\resources\Test.pdf (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2023-12-23 12:08:54,432 INFO [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2023-12-23 12:08:54,923 INFO [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32f232a5
+2023-12-23 12:08:54,925 INFO [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2023-12-23 12:08:56,628 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=bc555ab4-6cd4-4642-b2d8-699c128cae11, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в БД
+2023-12-23 12:08:56,764 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=bc555ab4-6cd4-4642-b2d8-699c128cae11, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,764 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id bc555ab4-6cd4-4642-b2d8-699c128cae11: null
+2023-12-23 12:08:56,764 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=bc555ab4-6cd4-4642-b2d8-699c128cae11, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
+2023-12-23 12:08:56,764 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id bc555ab4-6cd4-4642-b2d8-699c128cae11: Car(id=bc555ab4-6cd4-4642-b2d8-699c128cae11, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
+2023-12-23 12:08:56,764 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=0302aefa-f98a-4c74-aa94-43a85c11f383, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в БД
+2023-12-23 12:08:56,766 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=0302aefa-f98a-4c74-aa94-43a85c11f383, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,766 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 0302aefa-f98a-4c74-aa94-43a85c11f383: null
+2023-12-23 12:08:56,766 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=0302aefa-f98a-4c74-aa94-43a85c11f383, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
+2023-12-23 12:08:56,766 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 0302aefa-f98a-4c74-aa94-43a85c11f383: Car(id=0302aefa-f98a-4c74-aa94-43a85c11f383, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
+2023-12-23 12:08:56,768 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=4d379f08-48ae-49ee-82d5-0040e1ac28aa, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL) сохраненение/обновление в БД
+2023-12-23 12:08:56,768 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=4d379f08-48ae-49ee-82d5-0040e1ac28aa, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,768 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 4d379f08-48ae-49ee-82d5-0040e1ac28aa: null
+2023-12-23 12:08:56,768 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=4d379f08-48ae-49ee-82d5-0040e1ac28aa, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL)
+2023-12-23 12:08:56,768 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 4d379f08-48ae-49ee-82d5-0040e1ac28aa: Car(id=4d379f08-48ae-49ee-82d5-0040e1ac28aa, brand=Volkswagen, model=Passat B8, bodyType=STATION_WAGON, engineCapacity=2.0, fuelType=PETROL)
+2023-12-23 12:08:56,768 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=aa269598-c73f-4c5e-a552-f8468e8d9285, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в БД
+2023-12-23 12:08:56,770 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=aa269598-c73f-4c5e-a552-f8468e8d9285, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,770 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id aa269598-c73f-4c5e-a552-f8468e8d9285: null
+2023-12-23 12:08:56,770 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=aa269598-c73f-4c5e-a552-f8468e8d9285, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
+2023-12-23 12:08:56,770 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id aa269598-c73f-4c5e-a552-f8468e8d9285: Car(id=aa269598-c73f-4c5e-a552-f8468e8d9285, brand=Toyota, model=Hilux, bodyType=PICKUP, engineCapacity=2.5, fuelType=DIESEL)
+2023-12-23 12:08:56,770 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=db7e28f4-eeb8-45f9-a722-420263023511, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в БД
+2023-12-23 12:08:56,772 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=db7e28f4-eeb8-45f9-a722-420263023511, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,772 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id db7e28f4-eeb8-45f9-a722-420263023511: null
+2023-12-23 12:08:56,775 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
+2023-12-23 12:08:56,776 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=db7e28f4-eeb8-45f9-a722-420263023511, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
+2023-12-23 12:08:56,776 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id db7e28f4-eeb8-45f9-a722-420263023511: Car(id=db7e28f4-eeb8-45f9-a722-420263023511, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
+2023-12-23 12:08:56,776 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=10cb20c5-a1f2-4e80-bcfc-875a9e55ce6f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в БД
+2023-12-23 12:08:56,777 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=10cb20c5-a1f2-4e80-bcfc-875a9e55ce6f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,777 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 10cb20c5-a1f2-4e80-bcfc-875a9e55ce6f: null
+2023-12-23 12:08:56,777 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
+2023-12-23 12:08:56,777 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=10cb20c5-a1f2-4e80-bcfc-875a9e55ce6f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
+2023-12-23 12:08:56,777 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 10cb20c5-a1f2-4e80-bcfc-875a9e55ce6f: Car(id=10cb20c5-a1f2-4e80-bcfc-875a9e55ce6f, brand=BMW, model=5 G30, bodyType=SEDAN, engineCapacity=3.0, fuelType=DIESEL)
+2023-12-23 12:08:56,777 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=270f0b24-8a13-468d-8350-ccca915d6f2d, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в БД
+2023-12-23 12:08:56,780 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=270f0b24-8a13-468d-8350-ccca915d6f2d, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,780 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 270f0b24-8a13-468d-8350-ccca915d6f2d: null
+2023-12-23 12:08:56,780 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
+2023-12-23 12:08:56,780 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=270f0b24-8a13-468d-8350-ccca915d6f2d, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,780 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 270f0b24-8a13-468d-8350-ccca915d6f2d: Car(id=270f0b24-8a13-468d-8350-ccca915d6f2d, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,780 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 удаление из БД
+2023-12-23 12:08:56,782 INFO [ru.clevertec.cache.impl.LFUCache] - Метод delete() ProxyCarImpl.Объект Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 удаление из кеша
+2023-12-23 12:08:56,782 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Удаление объект из кеша с id 26635638-2f30-4891-81a0-bcac1f97b0d4: null
+2023-12-23 12:08:56,782 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 из кеша
+2023-12-23 12:08:56,782 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 26635638-2f30-4891-81a0-bcac1f97b0d4: null
+2023-12-23 12:08:56,782 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Объект Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 из кеша равен null
+2023-12-23 12:08:56,782 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 26635638-2f30-4891-81a0-bcac1f97b0d4 из БД
+2023-12-23 12:08:56,783 ERROR [ru.clevertec.Main] - Car with uuid: 26635638-2f30-4891-81a0-bcac1f97b0d4 not found
+2023-12-23 12:08:56,783 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из кеша
+2023-12-23 12:08:56,783 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 1be4206e-787f-4708-924f-1adf9dd9a5da: null
+2023-12-23 12:08:56,783 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Объект Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из кеша равен null
+2023-12-23 12:08:56,783 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из БД
+2023-12-23 12:08:56,785 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Обновление объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da в кеше
+2023-12-23 12:08:56,785 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: null
+2023-12-23 12:08:56,786 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения
+2023-12-23 12:08:56,786 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Добавление нового значения в кеш: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,786 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,802 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Получение объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da из кеша
+2023-12-23 12:08:56,802 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache.Объект с id 1be4206e-787f-4708-924f-1adf9dd9a5da: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,802 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findById() ProxyCarImpl.Обновление объекта Car с uuid 1be4206e-787f-4708-924f-1adf9dd9a5da в кеше
+2023-12-23 12:08:56,802 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,802 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,802 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в БД
+2023-12-23 12:08:56,803 INFO [ru.clevertec.cache.impl.LFUCache] - Метод save() ProxyCarImpl.Объект Car Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL) сохраненение/обновление в кеш
+2023-12-23 12:08:56,805 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Обновление счетчика значения в кеш: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,805 INFO [ru.clevertec.cache.impl.LFUCache] - Метод put() LFUCache. Объект из кеша с id 1be4206e-787f-4708-924f-1adf9dd9a5da: Car(id=1be4206e-787f-4708-924f-1adf9dd9a5da, brand=BMW, model=730, bodyType=SEDAN, engineCapacity=3.0, fuelType=PETROL)
+2023-12-23 12:08:56,808 ERROR [ru.clevertec.Main] - Invalid field brand
+2023-12-23 12:08:56,916 INFO [ru.clevertec.cache.impl.LFUCache] - Метод findAll() ProxyCarImpl.Получение List<Car> из БД

@@ -3,10 +3,11 @@ package ru.clevertec.dao.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import ru.clevertec.util.constant.SQLConstants;
-import ru.clevertec.dao.CarMapperDB;
+import org.springframework.transaction.annotation.Transactional;
 import ru.clevertec.dao.CarDAO;
+import ru.clevertec.dao.CarMapperDB;
 import ru.clevertec.entity.Car;
+import ru.clevertec.util.constant.SQLConstants;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +19,12 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class InPostgresCarDAO implements CarDAO {
 
+    public static final String ID = "id";
+    public static final String BRAND = "brand";
+    public static final String MODEL = "model";
+    public static final String BODY_TYPE = "bodyType";
+    public static final String ENGINE_CAPACITY = "engineCapacity";
+    public static final String FUEL_TYPE = "fuelType";
     private final NamedParameterJdbcTemplate template;
 
     /**
@@ -34,12 +41,12 @@ public class InPostgresCarDAO implements CarDAO {
         }
 
         Map<String, Object> params = new HashMap<>();
-        params.put("id", car.getId());
-        params.put("brand", car.getBrand());
-        params.put("model", car.getModel());
-        params.put("bodyType", car.getBodyType().name());
-        params.put("engineCapacity", car.getEngineCapacity());
-        params.put("fuelType", car.getFuelType().name());
+        params.put(ID, car.getId());
+        params.put(BRAND, car.getBrand());
+        params.put(MODEL, car.getModel());
+        params.put(BODY_TYPE, car.getBodyType().name());
+        params.put(ENGINE_CAPACITY, car.getEngineCapacity());
+        params.put(FUEL_TYPE, car.getFuelType().name());
 
         if (findById(car.getId()).isEmpty()) {
             return template.queryForObject(SQLConstants.SQL_SAVE, params, UUID.class);
@@ -55,9 +62,8 @@ public class InPostgresCarDAO implements CarDAO {
      */
     @Override
     public void delete(UUID uuid) {
-
         Map<String, Object> params = new HashMap<>();
-        params.put("id", uuid);
+        params.put(ID, uuid);
 
         template.update(SQLConstants.SQL_DELETE, params);
     }
@@ -81,8 +87,16 @@ public class InPostgresCarDAO implements CarDAO {
     @Override
     public Optional<Car> findById(UUID uuid) {
         Map<String, Object> params = new HashMap<>();
-        params.put("id", uuid);
+        params.put(ID, uuid);
 
         return template.query(SQLConstants.SQL_FIND_BY_ID, params, new CarMapperDB()).stream().findAny();
+    }
+
+    @Override
+    @Transactional
+    public List<Car> findLimitList(int limit, int numberStartSelection) {
+        String sqlFindLimitList = "SELECT * FROM cars LIMIT " + limit + " OFFSET " + numberStartSelection;
+
+        return template.query(sqlFindLimitList, new CarMapperDB());
     }
 }

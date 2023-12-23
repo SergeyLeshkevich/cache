@@ -16,5 +16,6 @@ public interface CarDAO {
     List<Car> findAll();
 
     Optional<Car> findById(UUID uuid);
+    List<Car> findLimitList(int limit, int numberStartSelection);
 
 }

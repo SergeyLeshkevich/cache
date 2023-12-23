@@ -6,7 +6,12 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum BodyType {
 
-    PICKUP("pickup"),SEDAN("sedan"),STATION_WAGON("station wagon");
+    PICKUP("pickup"),
+    SEDAN("sedan"),
+    STATION_WAGON("station wagon"),
+    MINIVAN("minivan"),
+    SUV("suv"),
+    COUPE("coupe");
 
     @Getter
     private final String type;

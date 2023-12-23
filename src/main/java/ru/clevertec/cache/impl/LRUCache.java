@@ -1,8 +1,7 @@
 package ru.clevertec.cache.impl;
 
 import lombok.ToString;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ru.clevertec.cache.Cache;
 
 import java.util.HashMap;
@@ -10,9 +9,8 @@ import java.util.LinkedList;
 import java.util.Map;
 
 @ToString
+@Slf4j
 public class LRUCache<K, V> implements Cache<K, V> {
-
-    private static final Logger logger = LogManager.getLogger(LFUCache.class);
 
     private final LinkedList<K> list;
     private final Map<K, V> valueMap;
@@ -33,7 +31,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
     @Override
     public V get(K key) {
         V object = valueMap.get(key);
-        logger.info("Метод put() LRUCache.Объект с id {}: {}", key, object);
+        log.info("Метод put() LRUCache.Объект с id {}: {}", key, object);
         return object;
     }
 
@@ -49,7 +47,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
         V resultValue = valueMap.get(key);
 
         if (resultValue == null) {
-            logger.info("Метод put() LRUCache.Объект с id {}: null", key);
+            log.info("Метод put() LRUCache.Объект с id {}: null", key);
             if (list.size() >= capacity) {
                 K keyToRemove = list.remove();
                 valueMap.remove(keyToRemove);
@@ -57,11 +55,11 @@ public class LRUCache<K, V> implements Cache<K, V> {
             list.addFirst(key);
             valueMap.put(key, value);
             resultValue = valueMap.get(key);
-            logger.info("Метод put() LRUCache.Объект с id {} добавлен в кеш", key);
+            log.info("Метод put() LRUCache.Объект с id {} добавлен в кеш", key);
         } else {
             list.remove(key);
             list.addFirst(key);
-            logger.info("Метод put() LRUCache.Объект с id {} обнавлен в кеше", key);
+            log.info("Метод put() LRUCache.Объект с id {} обнавлен в кеше", key);
         }
         return resultValue;
     }
@@ -77,7 +75,7 @@ public class LRUCache<K, V> implements Cache<K, V> {
         V tempValue = valueMap.get(key);
         list.remove(key);
         valueMap.remove(key);
-        logger.info("Метод put() LRUCache.Объект с id {} удален из кеша", key);
+        log.info("Метод put() LRUCache.Объект с id {} удален из кеша", key);
         return tempValue;
     }
 }
