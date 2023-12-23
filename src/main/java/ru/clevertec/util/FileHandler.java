@@ -13,8 +13,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfWriter;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ru.clevertec.entity.data.CarDTO;
 
 import java.io.FileOutputStream;
@@ -27,13 +26,13 @@ import java.util.List;
  * @version 1.0
  * the class is designed to generate files
  */
+@Slf4j
 public class FileHandler {
 
-    private static final Logger logger = LogManager.getLogger(FileHandler.class);
-    public static final String TEMPLATE_PDF = "src/main/resources/Clevertec_Template.pdf";
     public static final Font FONT_HEAD_TABLE = FontFactory.getFont(FontFactory.TIMES_ROMAN, 11);
     public static final Font FONT_BODY_TABLE = FontFactory.getFont(FontFactory.TIMES_ROMAN, 10);
     public static final Font FONT_NAME_TABLE = FontFactory.getFont(FontFactory.TIMES_ROMAN, 14);
+    public static final String TEMPLATE_PDF = "/Clevertec_Template.pdf";
 
     /**
      * method for generating a file of type .pdf
@@ -74,10 +73,9 @@ public class FileHandler {
             document.add(paragraph);
             document.add(new Paragraph("\n"));
             document.add(table);
-        } catch (DocumentException | IOException e) {
-            logger.info(e.getMessage());
-        } finally {
             document.close();
+        } catch (DocumentException | IOException e) {
+            log.error(e.getMessage());
         }
     }
 }

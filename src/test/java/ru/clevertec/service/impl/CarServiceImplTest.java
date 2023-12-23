@@ -117,8 +117,11 @@ class CarServiceImplTest {
         // given
         CarDTO dto = new CarDTO(AppConstantsTest.BRAND_CAR, AppConstantsTest.MODEL_CAR, AppConstantsTest.BODY_TYPE_ENUM_CAR,
                 AppConstantsTest.ENGINE_CAPACITY, AppConstantsTest.FUEL_ENUM_CAR);
+        Car car = new Car(AppConstantsTest.UUID_CAR, AppConstantsTest.BRAND_CAR, AppConstantsTest.MODEL_CAR, AppConstantsTest.BODY_TYPE_ENUM_CAR,
+                AppConstantsTest.ENGINE_CAPACITY, AppConstantsTest.FUEL_ENUM_CAR);
 
         when(carDAO.save(carTest.build())).thenReturn(AppConstantsTest.UUID_CAR);
+        when(carDAO.findById(AppConstantsTest.UUID_CAR)).thenReturn(Optional.of(car));
         when(carMapper.fromCarDto(dto)).thenReturn(carTest.build());
 
         // when
@@ -138,5 +141,29 @@ class CarServiceImplTest {
 
         // then
         verify(carDAO, atLeastOnce()).delete(uuid);
+    }
+
+    @Test
+    void shouldSizeLimitListTwo() {
+        // given
+        List<Car> carList = List.of(
+                new Car(UUID.fromString("44762276-3651-43ce-a4b3-e7587acbc607"), "Toyota", "Hilux", BodyType.PICKUP, 2.5, Fuel.DIESEL),
+                new Car(UUID.fromString("44762276-3651-43ce-a4b3-e7587acbc605"), "Toyota", "Hilux", BodyType.PICKUP, 2.5, Fuel.DIESEL),
+                new Car(UUID.fromString("1be4206e-787f-4708-924f-1adf9dd9a5da"), "BMW", "5 G30", BodyType.SEDAN, 3, Fuel.DIESEL));
+
+        List<CarDTO> expected = List.of(
+                new CarDTO("Toyota", "Hilux", BodyType.PICKUP, 2.5, Fuel.DIESEL),
+                new CarDTO("BMW", "5 G30", BodyType.SEDAN, 3, Fuel.DIESEL));
+
+        when(carDAO.findLimitList(2,0)).thenReturn(carList);
+        when(carMapper.toCardDtoList(carList)).thenReturn(expected);
+
+        // when
+        List<CarDTO> actual = carService.findLimitList(2,0);
+
+        // then
+        assertThat(actual).isNotNull()
+                .hasSize(2)
+                .isEqualTo(expected);
     }
 }

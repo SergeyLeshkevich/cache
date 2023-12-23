@@ -1,8 +1,7 @@
 package ru.clevertec.cache.impl;
 
 import lombok.ToString;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ru.clevertec.cache.Cache;
 
 import java.util.HashMap;
@@ -11,9 +10,8 @@ import java.util.LinkedList;
 import java.util.Map;
 
 @ToString
+@Slf4j
 public class LFUCache<K, V> implements Cache<K, V> {
-
-    private static final Logger logger = LogManager.getLogger(LFUCache.class);
 
     private final Map<Integer, LinkedList<K>> listMap;
     private final Map<K, V> valueMap;
@@ -36,7 +34,7 @@ public class LFUCache<K, V> implements Cache<K, V> {
     @Override
     public V get(K key) {
         V object = valueMap.get(key);
-        logger.info("Метод put() LFUCache.Объект с id {}: {}", key, object);
+        log.info("Метод put() LFUCache.Объект с id {}: {}", key, object);
         return object;
     }
 
@@ -53,12 +51,12 @@ public class LFUCache<K, V> implements Cache<K, V> {
 
         if (resultValue == null) {
 
-            logger.info("Метод put() LFUCache. Объект из кеша с id {}: null", key);
+            log.info("Метод put() LFUCache. Объект из кеша с id {}: null", key);
             if ((valueMap.size() + 1) > capacity) {
-                logger.info("Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения");
+                log.info("Метод put() LFUCache. Превышен размер кеша. Удаление наиболее старого значения");
                 removeOldValue();
             }
-            logger.info("Метод put() LFUCache. Добавление нового значения в кеш: {}", value);
+            log.info("Метод put() LFUCache. Добавление нового значения в кеш: {}", value);
             resultValue = addNewValue(key, value);
 
         } else {
@@ -73,9 +71,9 @@ public class LFUCache<K, V> implements Cache<K, V> {
             } else {
                 listMap.get(newCounter).addFirst(key);
             }
-            logger.info("Метод put() LFUCache. Обновление счетчика значения в кеш: {}", value);
+            log.info("Метод put() LFUCache. Обновление счетчика значения в кеш: {}", value);
         }
-        logger.info("Метод put() LFUCache. Объект из кеша с id {}: {}", key, resultValue);
+        log.info("Метод put() LFUCache. Объект из кеша с id {}: {}", key, resultValue);
         return resultValue;
     }
 
@@ -133,7 +131,7 @@ public class LFUCache<K, V> implements Cache<K, V> {
             resultValue = valueMap.remove(key);
             listMap.get(counterKey).remove(key);
         }
-        logger.info("Метод put() LFUCache. Удаление объект из кеша с id {}: {}", key, resultValue);
+        log.info("Метод put() LFUCache. Удаление объект из кеша с id {}: {}", key, resultValue);
         return resultValue;
     }
 }

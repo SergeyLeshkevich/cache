@@ -88,4 +88,10 @@ public class ProxyCarDAOImpl implements ProxyCarDAO {
         cache.put(car.getId(), car);
         return Optional.of(car);
     }
+
+    @Override
+    public List<Car> findLimitList(int limit, int numberStartSelection) {
+        logger.info("Метод findLimitList(int limit, int numberStartSelection) ProxyCarImpl.Получение  LimitList<Car> из БД");
+        return dao.findLimitList(limit,numberStartSelection);
+    }
 }

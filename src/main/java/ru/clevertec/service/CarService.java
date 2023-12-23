@@ -1,6 +1,7 @@
 package ru.clevertec.service;
 
 
+import ru.clevertec.entity.Car;
 import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.exception.CarNotFoundException;
 
@@ -15,7 +16,9 @@ public interface CarService {
 
     UUID create(CarDTO carDto);
 
-    UUID update(UUID uuid, CarDTO carDto);
+    UUID update(UUID uuid, CarDTO carDto) throws CarNotFoundException;
 
     void delete(UUID uuid);
+
+    List<CarDTO> findLimitList(int limit, int numberStartSelection);
 }

@@ -4,8 +4,8 @@ package ru.clevertec.service.impl;
 import ru.clevertec.dao.CarDAO;
 import ru.clevertec.entity.Car;
 import ru.clevertec.entity.data.CarDTO;
-import ru.clevertec.mapper.CarMapper;
 import ru.clevertec.exception.CarNotFoundException;
+import ru.clevertec.mapper.CarMapper;
 import ru.clevertec.service.CarService;
 
 import java.util.List;
@@ -65,8 +65,11 @@ public class CarServiceImpl implements CarService {
      * @return identifier of the created car
      */
     @Override
-    public UUID update(UUID uuid, CarDTO carDto) {
+    public UUID update(UUID uuid, CarDTO carDto) throws CarNotFoundException {
         Car car = carMapper.fromCarDto(carDto);
+        if (carDAO.findById(uuid).isEmpty()) {
+            throw new CarNotFoundException(uuid);
+        }
         car.setId(uuid);
         return carDAO.save(car);
     }
@@ -81,5 +84,18 @@ public class CarServiceImpl implements CarService {
         if (uuid != null) {
             carDAO.delete(uuid);
         }
+    }
+
+    /**
+     * Returns a list of car objects from the DAO of the specified range.
+     * If the selected interval does not contain objects, it will return an empty list
+     *
+     * @param limit   specified number of objects
+     * @param numberStartSelection sample start position
+     * @return a list with information about cars
+     */
+    @Override
+    public List<CarDTO> findLimitList(int limit, int numberStartSelection) {
+        return carMapper.toCardDtoList(carDAO.findLimitList(limit, numberStartSelection));
     }
 }

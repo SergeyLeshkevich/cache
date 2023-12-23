@@ -1,5 +1,6 @@
 package ru.clevertec.util;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.enums.BodyType;
@@ -18,10 +19,15 @@ class FileHandlerTest {
 
     public static final String TEST_FILE = "src/test/resources/Test.pdf";
     public static final String TABLE_NAME = "Test table";
-    private final FileHandler fileHandler = new FileHandler();
+    private FileHandler fileHandler;
+
+    @BeforeEach
+    void init() {
+        fileHandler = new FileHandler();
+    }
 
     @Test
-    public void checkFilePDF() {
+    void checkFilePDF() {
         List<CarDTO> carDTOList = new ArrayList<>();
         carDTOList.add(new CarDTO("Toyota", "Camry", BodyType.SEDAN, 2.5, Fuel.DIESEL));
         carDTOList.add(new CarDTO("Honda", "Civic", BodyType.SEDAN, 1.8, Fuel.DIESEL));
@@ -33,7 +39,7 @@ class FileHandlerTest {
     }
 
     @Test
-    public void checkWriteTableToFilePDF() {
+    void checkWriteTableToFilePDF() {
         // given
         String expected = " \n" +
                 " \n" +
@@ -58,7 +64,7 @@ class FileHandlerTest {
         fileHandler.writeTableToFilePDF(TEST_FILE, carDTOList, TABLE_NAME);
 
         // then
-        String actual = ReadPDF(TEST_FILE); // метод для чтения содержимого PDF файла
+        String actual = ReadPDF(TEST_FILE);
         assertThat(actual).isEqualTo(expected);
     }
 
