@@ -1,8 +1,8 @@
 package ru.clevertec.dao.impl;
 
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.clevertec.dao.CarDAO;
 import ru.clevertec.dao.CarMapperDB;
@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-
+@Component
 @RequiredArgsConstructor
 public class InPostgresCarDAO implements CarDAO {
 
@@ -25,6 +25,7 @@ public class InPostgresCarDAO implements CarDAO {
     public static final String BODY_TYPE = "bodyType";
     public static final String ENGINE_CAPACITY = "engineCapacity";
     public static final String FUEL_TYPE = "fuelType";
+
     private final NamedParameterJdbcTemplate template;
 
     /**

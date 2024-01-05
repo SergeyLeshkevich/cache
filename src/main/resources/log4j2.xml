@@ -4,7 +4,7 @@
     <Appenders>
 
         <File name="File" fileName="src/main/resources/application.log">
-            <PatternLayout pattern="%d %p [%c] - %m%n" />
+            <PatternLayout pattern="%d %p [%c - %M %L] - %m%n" />
         </File>
     </Appenders>
 

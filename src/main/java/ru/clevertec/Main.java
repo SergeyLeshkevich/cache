@@ -2,31 +2,19 @@ package ru.clevertec;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.mapstruct.factory.Mappers;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import ru.clevertec.cache.CacheFactory;
-import ru.clevertec.cache.impl.CacheFactoryImpl;
-import ru.clevertec.config.db.DatabaseConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.clevertec.config.app.SpringConfig;
 import ru.clevertec.config.db.LiquibaseStarter;
-import ru.clevertec.dao.impl.InPostgresCarDAO;
-import ru.clevertec.entity.Car;
 import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.enums.BodyType;
 import ru.clevertec.enums.Fuel;
 import ru.clevertec.exception.CarNotFoundException;
 import ru.clevertec.exception.ValidationException;
-import ru.clevertec.mapper.CarMapper;
 import ru.clevertec.service.CarService;
-import ru.clevertec.service.impl.CarServiceImpl;
-import ru.clevertec.service.proxy.ProxyCarDAOImpl;
 import ru.clevertec.util.FileHandler;
 import ru.clevertec.util.validation.Validation;
 
-import javax.sql.DataSource;
 import java.util.UUID;
-
 
 @RequiredArgsConstructor
 @Slf4j
@@ -37,15 +25,10 @@ public class Main {
     public static final String PDF = ".pdf";
 
     public static void main(String[] args) {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 
-        DataSource dataSource = DatabaseConfig.dataSource();
-        NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(dataSource);
-        CacheFactory<UUID, Car> cacheFactory = new CacheFactoryImpl<>();
-
-        new LiquibaseStarter().createDbForStartProject();
-        ProxyCarDAOImpl carDAO = new ProxyCarDAOImpl(new InPostgresCarDAO(template), cacheFactory.createCache());
-        CarMapper carMapper = Mappers.getMapper(CarMapper.class);
-        CarService service = new CarServiceImpl(carDAO, carMapper);
+        context.getBean(LiquibaseStarter.class).createDbForStartProject();
+        CarService service = context.getBean(CarService.class);
 
         CarDTO car1 = new CarDTO("Toyota", "Hilux", BodyType.PICKUP, 2.5, Fuel.DIESEL);
         CarDTO car2 = new CarDTO("BMW", "5 G30", BodyType.SEDAN, 3, Fuel.DIESEL);

@@ -1,6 +1,7 @@
 package ru.clevertec.service.impl;
 
-
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import ru.clevertec.dao.CarDAO;
 import ru.clevertec.entity.Car;
 import ru.clevertec.entity.data.CarDTO;
@@ -11,12 +12,13 @@ import ru.clevertec.service.CarService;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class CarServiceImpl implements CarService {
 
     private final CarDAO carDAO;
     private final CarMapper carMapper;
 
-    public CarServiceImpl(CarDAO carDAO, CarMapper carMapper) {
+    public CarServiceImpl(@Qualifier("proxyCarDaoImpl") CarDAO carDAO, CarMapper carMapper) {
         this.carDAO = carDAO;
         this.carMapper = carMapper;
     }

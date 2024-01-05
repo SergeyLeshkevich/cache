@@ -18,6 +18,9 @@ ext {
 dependencies {
     implementation 'com.google.code.gson:gson:2.10.1'
     compileOnly('jakarta.servlet:jakarta.servlet-api:5.0.0')
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '6.1.2'
+    implementation group: 'org.springframework', name: 'spring-core', version: '6.1.2'
+    implementation group: 'org.springframework', name: 'spring-context', version: '6.1.2'
 
     implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.3'
     implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '3.0.0'
@@ -48,6 +51,8 @@ dependencies {
     implementation 'org.postgresql:postgresql:42.2.27'
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.22.0'
+    testImplementation group: 'org.slf4j', name: 'slf4j-nop', version: '2.1.0-alpha1'
+
 
     implementation group: 'com.lmax', name: 'disruptor', version: '3.3.4'
 
@@ -58,6 +63,18 @@ dependencies {
 }
 
 apply plugin: 'org.liquibase.gradle'
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes(
+                'Main-Class': 'ru.clevertec.Main'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
 
 test {
     useJUnitPlatform()
