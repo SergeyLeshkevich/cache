@@ -1,16 +1,21 @@
 package ru.clevertec.cache.impl;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 import ru.clevertec.cache.Cache;
 import ru.clevertec.cache.CacheFactory;
-import ru.clevertec.util.YamlManager;
 
-import java.util.Map;
+import java.util.Objects;
 
+@Component
+@RequiredArgsConstructor
 public class CacheFactoryImpl<K, V> implements CacheFactory<K, V> {
 
-    public static final String APPLICATION_YAML = "\\application.yaml";
     private static final String CAPACITY_KEY = "capacity";
     private static final String ALGORITHM_KEY = "algorithm";
+
+    private final Environment environment;
 
     /**
      * Gets a cache object depending on the settings in application.yaml
@@ -19,9 +24,8 @@ public class CacheFactoryImpl<K, V> implements CacheFactory<K, V> {
      */
     @Override
     public Cache<K, V> createCache() {
-        Map<String, Object> mapValueYaml = new YamlManager().getValue(APPLICATION_YAML);
-        return "LFU".equals(mapValueYaml.get(ALGORITHM_KEY))
-                ? new LFUCache<>((Integer) mapValueYaml.get(CAPACITY_KEY))
-                : new LRUCache<>((Integer) mapValueYaml.get(CAPACITY_KEY));
+        return "LFU".equals(environment.getProperty(ALGORITHM_KEY))
+                ? new LFUCache<>(Integer.parseInt(Objects.requireNonNull(environment.getProperty(CAPACITY_KEY))))
+                : new LRUCache<>(Integer.parseInt(Objects.requireNonNull(environment.getProperty(CAPACITY_KEY))));
     }
 }

@@ -2,15 +2,15 @@ package ru.clevertec.servlet.car;
 
 import com.google.gson.Gson;
 import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.clevertec.config.app.SpringConfig;
 import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.exception.CarNotFoundException;
 import ru.clevertec.service.CarService;
-import ru.clevertec.servlet.car.config.FabricCarService;
 import ru.clevertec.util.FileHandler;
 import ru.clevertec.util.constant.FieldsCarConstants;
 
@@ -22,12 +22,12 @@ import java.util.UUID;
 @WebServlet(name = "car-servlet", value = "/cars/file")
 public class CarPrintServlet extends HttpServlet {
 
-    private transient CarService carService;
-    private transient Gson gson;
+    private final CarService carService;
+    private final Gson gson;
 
-    @Override
-    public void init() throws ServletException {
-        carService = FabricCarService.getInstance().getCarService();
+    public CarPrintServlet() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        carService = context.getBean(CarService.class);
         gson = new Gson();
     }
 

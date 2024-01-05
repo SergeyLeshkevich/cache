@@ -1,17 +1,17 @@
 package ru.clevertec.servlet.car;
 
 import com.google.gson.Gson;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ru.clevertec.config.app.SpringConfig;
 import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.enums.BodyType;
 import ru.clevertec.enums.Fuel;
 import ru.clevertec.exception.CarNotFoundException;
 import ru.clevertec.service.CarService;
-import ru.clevertec.servlet.car.config.FabricCarService;
 import ru.clevertec.util.constant.FieldsCarConstants;
 
 import java.io.IOException;
@@ -20,12 +20,12 @@ import java.util.UUID;
 
 @WebServlet(name = "get-car-servlet", value = "/cars")
 public class GetCarServlet extends HttpServlet {
-    private transient CarService carService;
-    private transient Gson gson;
+    private final CarService carService;
+    private final Gson gson;
 
-    @Override
-    public void init() throws ServletException {
-        carService = FabricCarService.getInstance().getCarService();
+    public GetCarServlet() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        carService = context.getBean(CarService.class);
         gson = new Gson();
     }
 
@@ -76,7 +76,7 @@ public class GetCarServlet extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
-            UUID uuid = UUID.fromString(req.getParameter(FieldsCarConstants.UUID_CAR));
+            UUID uuid = java.util.UUID.fromString(req.getParameter(FieldsCarConstants.UUID_CAR));
             String model = req.getParameter(FieldsCarConstants.MODEL);
             String brand = req.getParameter(FieldsCarConstants.BRAND);
             double engineCapacity = Double.parseDouble(req.getParameter(FieldsCarConstants.ENGINE_CAPACITY));

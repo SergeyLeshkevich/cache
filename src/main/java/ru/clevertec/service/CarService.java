@@ -1,7 +1,5 @@
 package ru.clevertec.service;
 
-
-import ru.clevertec.entity.Car;
 import ru.clevertec.entity.data.CarDTO;
 import ru.clevertec.exception.CarNotFoundException;
 

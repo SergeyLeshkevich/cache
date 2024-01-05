@@ -7,7 +7,7 @@ import ru.clevertec.entity.data.CarDTO;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface CarMapper {
 
     /**
